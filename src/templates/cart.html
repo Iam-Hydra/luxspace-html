@@ -25,80 +25,45 @@
     <!-- Add your site or application content here -->
 
     <!-- START: Header -->
-    <header class=" w-full z-50 px-4 ">
+    <header class="w-full z-50 px-4">
       <div class="container mx-auto py-10">
         <div class="flex flex-stretch items-center">
           <div class="w-56 flex items-center">
             <img
-              src="images/design/logo.svg"
-              alt="Luxspace - web Terbaik untuk Funiture"
+              src="./images/design/logo.svg"
+              alt="Luxspace - Adalah sebuah website yang menjual barang-barang kece"
             />
           </div>
           <div class="w-full"></div>
 
-          <!-- START: navbar Hamburger -->
+          <!-- START: menu hamburger wrapper -->
           <div class="w-auto">
             <ul
-            id="menu"
-              class="
-                fixed
-                bg-white
-                inset-0
-                flex
-                flex-col
-                invisible
-                items-center
-                justify-center
-                opacity-0
-                md:visible
-                md:flex-row
-                md:bg-transparent
-                md:relative
-                md:opacity-100
-                md:items-center
-              "
-              
+              id="menu"
+              class="fixed bg-white inset-0 flex flex-col invisible items-center justify-center opacity-0 md:visible md:flex-row md:bg-transparent md:relative md:opacity-100"
             >
-              <li class="py-6 mx-3 md:py-0">
-                <a href="#" class="text-black md:hover:text-white hover:text-pink-400 hover:underline"
-                  >Showcase</a
-                >
+              <li class="mx-3 py-6 md:py-0">
+                <a href="#" class="text-black hover:underline">Showcase</a>
               </li>
-              <li class="py-6 mx-3 md:py-0">
-                <a href="#" class="text-black md:hover:text-white hover:text-pink-400 hover:underline"
-                  >Catalog</a
-                >
+              <li class="mx-3 py-6 md:py-0">
+                <a href="#" class="text-black hover:underline">Catalog</a>
               </li>
-              <li class="py-6 mx-3 md:py-0">
-                <a href="#" class="text-black md:hover:text-white hover:text-pink-400 hover:underline"
-                  >Delivery</a
-                >
+              <li class="mx-3 py-6 md:py-0">
+                <a href="#" class="text-black hover:underline">Delivery</a>
               </li>
-              <li class="py-6 mx-3 md:py-0">
-                <a href="#" class="text-black md:hover:text-white hover:text-pink-400 hover:underline"
-                  >Rewards</a
-                >
+              <li class="mx-3 py-6 md:py-0">
+                <a href="#" class="text-black hover:underline">Rewards</a>
               </li>
             </ul>
           </div>
-          <!-- End: navbar Hamburger -->
+          <!-- END: menu hamburger wrapper -->
 
           <div class="w-auto">
             <ul class="flex items-center">
               <li class="ml-6 block md:hidden">
                 <button
                   id="menu-toggler"
-                  class="
-                    relative
-                    flex
-                    z-50
-                    items-center
-                    justify-center
-                    w-8
-                    h-8
-                    text-black
-                    focus:outline
-                  "
+                  class="relative flex z-50 items-center justify-center w-8 h-8 text-black focus:outline-none"
                 >
                   <svg
                     class="fill-current"
@@ -110,20 +75,23 @@
                   >
                     <path
                       d="M15.9773 0.461304H1.04219C0.466585 0.461304 0 0.790267 0 1.19609C0 1.60192 0.466668 1.93088 1.04219 1.93088H15.9773C16.5529 1.93088 17.0195 1.60192 17.0195 1.19609C17.0195 0.790208 16.5529 0.461304 15.9773 0.461304Z"
-                      fill="black"
                     />
                     <path
                       d="M15.9773 7.68802H1.04219C0.466585 7.68802 0 8.01698 0 8.42281C0 8.82864 0.466668 9.1576 1.04219 9.1576H15.9773C16.5529 9.1576 17.0195 8.82864 17.0195 8.42281C17.0195 8.01692 16.5529 7.68802 15.9773 7.68802Z"
-                      fill="black"
                     />
                     <path
                       d="M15.9773 14.9147H1.04219C0.466585 14.9147 0 15.2437 0 15.6495C0 16.0553 0.466668 16.3843 1.04219 16.3843H15.9773C16.5529 16.3843 17.0195 16.0553 17.0195 15.6495C17.0195 15.2436 16.5529 14.9147 15.9773 14.9147Z"
-                      fill="black"
                     />
                   </svg>
                 </button>
-                <li class="ml-6">
-                  <a href="cart.html" class="flex items-center cart cart-filled justify-center w-8 h-8 text-black hover:text-white"><svg
+              </li>
+              <li class="ml-6">
+                <a
+                  id="header-cart"
+                  href="cart.html"
+                  class="flex items-center justify-center w-8 h-8 text-black cart cart-filled"
+                >
+                  <svg
                     class="fill-current"
                     width="29"
                     height="25"
@@ -154,8 +122,8 @@
                         class="fill-current dot"
                       />
                     </g>
-                  </svg></a>
-                </li>
+                  </svg>
+                </a>
               </li>
             </ul>
           </div>
@@ -183,14 +151,14 @@
     <section class="md:py-16">
       <div class="container mx-auto px-4">
         <div class="flex -mx-4 flex-wrap">
+
           <!-- Start: Shipping Cart -->
-          <div class="w-full px-4 mb-4 md:w-8/12 md:mb-0">
+          <div class="w-full px-4 mb-4 md:w-8/12 md:mb-0" id="shopping-cart">
             <div class="flex flex-start mb-4 mt-8 pb-3 border-b border-gray-200 md:border-b-0">
               <h3 class="text-2xl">Shopping Cart</h3>
             </div>
           
-
-            <!-- Start: Tabel Title -->
+              <!-- Start: Tabel Title -->
           <div class="border-b border-gray-200 mb-4 hidden md:block">
             <div class="flex flex-start items-center pb-4 -mx-4">
               <div class="px-4 flex-none">
@@ -216,6 +184,12 @@
             </div>
           </div>
             <!-- End: Tabel Title -->
+
+            <!-- Start: Cart Empty -->
+            <p id="cart-empty" class="py-8 hidden text-center">
+              Ooops.... Cart is empty <a href="details.html" class="underline text-black hover:text-pink-300" >Shop Now! </a>
+            </p>
+            <!-- End: Cart Empty -->
 
             <!-- Start: Tabel Item 1 -->
             <div class="flex flex-wrap flex-start mb-4 -mx-4 items-center" data-row="1">
@@ -256,7 +230,7 @@
           <!-- End: Tabel Item 1 -->
           
           <!-- Start: Tabel Item 2 -->
-            <div class="flex flex-wrap flex-start mb-4 -mx-4 items-center" data-row="1">
+            <div class="flex flex-wrap flex-start mb-4 -mx-4 items-center" data-row="2">
               <div class="px-4 flex-none">
                 <div class="" style="width: 90px; height: 90px;">
                 <img src="../images/content/chair-office-2.jpg" alt="Chair Office" class="object-cover rounded-xl w-full h-full" />
@@ -283,7 +257,7 @@
             <div class="px-4 w-2/12">
               <div class="text-center">
                 <button
-                  data-delete-item="1"
+                  data-delete-item="2"
                   class="text-red-600 border-none focus:outline-none px-3 py-1"
                 >
                   X
@@ -294,7 +268,7 @@
           <!-- End: Tabel Item 2 -->
           
           <!-- Start: Tabel Item 3 -->
-            <div class="flex flex-wrap flex-start mb-4 -mx-4 items-center" data-row="1">
+            <div class="flex flex-wrap flex-start mb-4 -mx-4 items-center" data-row="3">
               <div class="px-4 flex-none">
                 <div class="" style="width: 90px; height: 90px;">
                 <img src="../images/content/chair-office-3.jpg" alt="Chair Office" class="object-cover rounded-xl w-full h-full" />
@@ -321,7 +295,7 @@
             <div class="px-4 w-2/12">
               <div class="text-center">
                 <button
-                  data-delete-item="1"
+                  data-delete-item="3"
                   class="text-red-600 border-none focus:outline-none px-3 py-1"
                 >
                   X
@@ -331,12 +305,191 @@
           </div>
           <!-- End: Tabel Item 3 -->
 
-        </div> 
-          
+        </div>
           <!-- End: Shipping Cart -->
 
           <!-- Start: Shipping Details -->
+          <div class="w-full md:px-4 md:w-4/12" id="shipping-detail">
+            <div class="bg-gray-100 px-4 py-6 md:p-8 md:rounded-3xl">
+              <form action="success.html">
+                <div class="flex flex-start mb-6">
+                  <h3 class="text-2xl">Shipping Details</h3>
+                </div>
+                
+            <!-- Start: Input Nama -->
+              <div class="flex flex-col mb-4">
+                <label for="complete-name" class="text-sm mb-2">Complete Your Name</label>
+                <input 
+                  data-input
+                  type="text" 
+                  id="complete-name" 
+                  class="border border-gray-200 rounded-lg px-4 py-2 bg-white text-sm focus:border-blue-200 focus:outline-none" placeholder="Input Your Name" />
+              </div>
+            <!-- End: Input Nama -->
 
+              <!-- Start: Input Email -->
+              <div class="flex flex-col mb-4">
+                <label for="email-address" class="text-sm mb-2">
+                  Email Address
+                </label>
+                <input 
+                data-input type="email" id="email" class="border border-gray-200 px-4 py-2 rounded-lg bg-white text-sm focus:border-blue-200 focus:outline-none" 
+                  placeholder="Input Your Email Address" />
+              </div>
+            <!-- End: Input Email -->
+
+              <!-- Start: Input Address -->
+              <div class="flex flex-col mb-4">
+                <label for="address" class="text-sm mb-2">
+                  Address
+                </label>
+                <input data-input type="text" id="address" class="border border-gray-200 px-4 py-2 rounded-lg bg-white text-sm focus:border-blue-200 focus:outline-none" 
+                  placeholder="Input Your Address" />
+              </div>
+            <!-- End: Input Address -->
+            
+              <!-- Start: Input Phone Number -->
+              <div class="flex flex-col mb-4">
+                <label for="phone-number" class="text-sm mb-2">
+                  Phone Number 
+                </label>
+                <input data-input type="tel" id="phone-number" class="border border-gray-200 px-4 py-2 rounded-lg bg-white text-sm focus:border-blue-200 focus:outline-none" 
+                  placeholder="Input Your Phone Number" />
+              </div>
+            <!-- End: Input Phone Number -->
+
+            <!-- Start: Choose Courier -->
+            <div class="flex flex-col mb-4">
+              <label class="text-sm mb-2">
+                Choose Courier  
+              </label>
+
+              <div class="flex flex-wrap -mx-2">
+
+                <!-- Start: Courier 1 -->
+                <div class="px-2 w-6/12 h-24 mb-4">
+                  <button
+                    data-value="fedex"
+                    data-name="courier"
+                    type="button"
+                    class="border border-gray-200 focus:outline-none focus:border-red-200 flex items-center justify-center rounded-xl bg-white w-full h-full"
+                  >
+                    <img
+                      src="./images/content/courier/logo-fedex.png"
+                      alt="fedex"
+                      class="object-contain max-h-full"
+                    />
+                  </button>
+                </div>
+                <!-- End: Courier 1 -->
+
+                <!-- Start: Courier 2 -->
+                <div class="px-2 w-6/12 h-24 mb-4">
+                  <button
+                    data-value="dhl"
+                    data-name="courier"
+                    type="button"
+                    class="border border-gray-200 focus:outline-none focus:border-red-200 flex items-center justify-center rounded-xl bg-white w-full h-full"
+                  >
+                    <img
+                      src="./images/content/courier/logo-dhl.png"
+                      alt="dhl"
+                      class="object-contain max-h-full"
+                    />
+                  </button>
+                </div>
+                <!-- End: Courier 2 -->
+              </div>
+            
+          </div>
+          <!-- End: Choose Courier -->
+
+          <!-- Start: Choose Payment -->
+          <div class="flex flex-col mb-4">
+            <label class="text-sm mb-2">
+              Choose Courier  
+            </label>
+
+            <div class="flex flex-wrap -mx-2">
+
+              <!-- Start: payment 1 -->
+              <div class="px-2 w-6/12 h-24 mb-4">
+                <button
+                  data-value="midtrans"
+                  data-name="payment"
+                  type="button"
+                  class="border border-gray-200 focus:outline-none focus:border-red-200 flex items-center justify-center rounded-xl bg-white w-full h-full"
+                >
+                  <img
+                    src="../images/content/payment/logo-midtrans.png"
+                    alt="midtrans"
+                    class="object-contain max-h-full"
+                  />
+                </button>
+              </div>
+              <!-- End: payment 1 -->
+
+              <!-- Start: payment 2 -->
+              <div class="px-2 w-6/12 h-24 mb-4">
+                <button
+                  data-value="mastercard"
+                  data-name="payment"
+                  type="button"
+                  class="border border-gray-200 focus:outline-none focus:border-red-200 flex items-center justify-center rounded-xl bg-white w-full h-full"
+                >
+                  <img
+                    src="../images/content/payment/logo-mastercard.png"
+                    alt="master card"
+                    class="object-contain max-h-full"
+                  />
+                </button>
+              </div>
+              <!-- End: payment 2 -->
+
+              <!-- Start: payment 3 -->
+              <div class="px-2 w-6/12 h-24 mb-4">
+                <button
+                  data-value="bitcoin"
+                  data-name="payment"
+                  type="button"
+                  class="border border-gray-200 focus:outline-none focus:border-red-200 flex items-center justify-center rounded-xl bg-white w-full h-full"
+                >
+                  <img
+                    src="../images/content/payment/logo-bitcoin.png"
+                    alt="Bitcoin"
+                    class="object-contain max-h-full"
+                  />
+                </button>
+              </div>
+              <!-- End: payment 3 -->
+          
+            <!-- Start: payment 4 -->
+            <div class="px-2 w-6/12 h-24 mb-4">
+              <button
+                data-value="american-express
+                data-name="payment"
+                type="button"
+                class="border border-gray-200 focus:outline-none focus:border-red-200 flex items-center justify-center rounded-xl bg-white w-full h-full"
+              >
+                <img
+                  src="../images/content/payment/logo-american-express.png"
+                  alt="master card"
+                  class="object-contain max-h-full"
+                />
+              </button>
+            </div>
+            <!-- End: payment 4 -->
+
+            <button type="submit" 
+                    disabled
+                    class="bg-pink-400 text-black focus:outline-none focus:bg-black py-3 rounded-full text-lg focus:text-pink-400 transition-all duration-200 px-6 w-full h-full">
+                    Checkout Now
+                  </button>
+        </div>
+        <!-- End: Choose Payment -->
+            </form>
+          </div>
+        </div>
           <!-- End: Shipping Details -->
         </div>
       </div>
@@ -349,7 +502,7 @@
 
     <!-- Start: Footer Menu -->
     <section class="">
-      <div class=" border-b border-gray-200 py-12 px-4">
+      <div class=" border-b border-t border-gray-200 py-12 px-4">
         <div class="flex justify-center mb-8">
           <img
               src="images/design/logo.svg"
